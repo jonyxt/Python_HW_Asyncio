@@ -34,6 +34,7 @@ class SwapiPeople(Base):
     mass: MappedColumn[str] = mapped_column(String)
     name: MappedColumn[str] = mapped_column(String)
     skin_color: MappedColumn[str] = mapped_column(String)
+    swapi_id: MappedColumn[int] = mapped_column(Integer, unique=True)
 
 
 async def open_orm():
